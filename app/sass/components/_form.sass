@@ -1,0 +1,84 @@
+.form 
+    padding-top: 56px
+    text-align: center
+    padding-bottom: 58px
+    background: linear-gradient(90deg, #254A93 0%, #2490F4 111.1%), #254A93
+    &__title 
+        font-family: 'Roboto'
+        font-weight: 400
+        font-size: 36px
+        color: #fff
+        margin-bottom: 56px
+    &__body 
+        display: flex
+        flex-wrap: wrap
+        max-width: 953px
+        margin: 0 auto
+        justify-content: space-between
+        label 
+            margin: 0 auto
+            margin-top: 50px
+            color: #fff
+            max-width: 666px 
+            font-size: 14px
+            padding-left: 45px
+            position: relative
+            font-weight: 400
+            display: inline-block
+            &:before 
+                content: ''
+                width: 25px
+                height: 25px
+                border: 1px solid #fff
+                left: -1px
+                top: -6px
+                position: absolute
+                background: transparent
+                display: inline-block
+            
+        
+        input[type="checkbox"]
+            display: none
+        
+        input[type='tel'], input[type='text'] 
+            width: 362px
+            background: transparent
+            border: none
+            border-bottom: 1px solid #fff
+            color: #fff    
+            &::placeholder 
+                color: #fff
+                font-size: 14px
+            
+            &::-webkit-input-placeholder  /* Chrome/Opera/Safari */
+                color: #fff
+                font-size: 14px
+              
+            &::-moz-placeholder  /* Firefox 19+ */
+                color: #fff
+                font-size: 14px
+              
+            &:-ms-input-placeholder  /* IE 10+ */
+                color: #fff
+                font-size: 14px
+              
+            &:-moz-placeholder  /* Firefox 18- */
+                color: #fff
+                font-size: 14px
+              
+        
+        input[type='submit'] 
+            border-radius: 10px
+            margin-bottom: -9px
+            outline: none
+            border: 1px solid #fff
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #fff
+            width: 166px
+            height: 54px
+            color: #2490F4
+            &:hover, &:focus 
+                background: #2490F4
+                color: #fff

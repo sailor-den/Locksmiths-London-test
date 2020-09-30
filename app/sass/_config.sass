@@ -1,0 +1,129 @@
+// USER VARIABLES SECTION
+
+$accent: orange // Accent Color
+$fontsize: 20px // Body Font Size
+$textcolor: #737373 // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$font: "Roboto", sans-serif //  Font Family
+
+
+$minWidth: 320px 	
+$maxWidthContainer: 990
+$maxWidth: 1920
+$md1: $maxWidthContainer + 12
+$md2: 991.98
+$md3: 767.98 
+$md4: 479.98
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/bootstrap.scss' // Bootstrap 
+@import 'node_modules/owl.carousel/src/scss/owl.theme.default.scss' // 
+
+
+// FONTS LOAD SECTION
+
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+@mixin font($fname, $fstyle, $fweight, $furl, $furl_2)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff'), url($furl_2) format('woff2')
+		    
+@include font('Roboto', normal, 400, '../fonts/Roboto/Roboto-Regular.woff', '../fonts/Roboto/Roboto-Regular.woff2')
+@include font('Roboto', normal, 500, '../fonts/Roboto/Robotomedium.woff', '../fonts/Roboto/Robotomedium.woff2')
+
+@include font('Montserrat', normal, 400, '../fonts/Montserrat/Montserrat-Medium.woff', '../fonts/Montserrat/Montserrat-Medium.woff2')
+@include font('Montserrat', normal, 500, '../fonts/Montserrat/Montserrat-Regular.woff', '../fonts/Montserrat/Montserrat-Regular.woff2')
+
+
+
+// For example mixin font
+
+@mixin bold 
+	font-family: Roboto, sans-serif
+	font-weight: bold
+	font-size: 25px
+
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+*
+	box-sizing: border-box
+
+html 
+	height: 100%
+
+body
+	height: 100%
+	font-family: $font
+	font-size: $fontsize
+	font-weight: 400
+	min-width: 320px
+	position: relative
+	line-height: 1.42
+	overflow-x: hidden
+	color: $textcolor
+	background-color: #f4f2f2
+
+img 
+	display: block
+	max-width: 100%
+	height: auto 
+
+ul 
+	margin: 0
+	padding: 0
+
+ul li 
+	list-style: none
+
+p 
+	padding: 0
+	margin: 0
+
+.container 
+    max-width: 1094px
+    margin: 0 auto
+
+.btn 
+    &:hover
+        color: #254A93
+        background: #fff  
+        border: 1px solid #254A93
+
+// a
+// 	&:hover
+// 		text-decoration: none
+
+// .container	
+//     max-width: $maxWidthContainer + px
+//     margin: 0 auto 
